@@ -1,22 +1,19 @@
-// Assignment Code
+
 var generateBtn = document.querySelector("#generate");
 
-var characters = '';
+generateBtn.addEventListener("click", writePassword());
 
+var characters = '';
 var numberChars;
-var password;
-var passwordText;
 
 function writePassword() {
-  var password = generatePassword();
-  var passwordText = document.querySelector("#password");
-  passwordText.value = password;
-}
-
-generateBtn.addEventListener("click", writePassword())
+    var password = generatePassword();
+    var passwordText = document.querySelector("#password");
+    passwordText.value = password;
+  }
 
 function passwordLength() {
-    var numberChars = prompt("Please choose a number of characters for your password, between 8 and 128");
+    var numberChars = Number(prompt("Please choose a number of characters for your password, between 8 and 128"));
     if (numberChars < 8 || numberChars > 128 || isNaN(numberChars)) {
        alert("You must choose a number higher than 7 or lower than 129.");
        passwordLength();
@@ -27,6 +24,7 @@ function passwordLength() {
         alert("Oops, that's not a number. Try again!");
         passwordLength();
         }
+    window.numberChars = numberChars
     }      
 
 function addLowercase() {
@@ -55,6 +53,9 @@ function addNumeric() {
         } return characters;  
     }
 
+    console.log(numberChars)
+    console.log(characters)
+
 function addSymbols() {
     var symbols = ' !#$%&*+,-./:;<=>?()"@\^_`{|}~';
     var addSymbols = confirm("Would you like to add Special Characters to your password?");
@@ -65,28 +66,27 @@ function addSymbols() {
     }
 
     
-
 function generatePassword() {
-    passwordLength()
+    passwordLength();
     addLowercase();
     addUppercase();
     addNumeric();
     addSymbols();
-
     console.log(characters)
-
     if (characters.length < 1) {
         alert("You need to choose at least one set of characters, please try again.")
         generatePassword();
-    } else {   
-       var chars = characters.slice('');
-       
-       console.log(chars)
-
-       for (var i = 0; i <+ numberChars; i++){
-       passwordText = Math.floor(Math.random() * numberChars.length);
-       password += characters.substring(passwordText, passwordText+1);
-       document.querySelector("#password").value = password;
-           }       
-        }}
+    } else {
+        var chars = numberChars
+        var password = '';
+       for (var i = 0; i <+ chars; i++){
+       random = Math.floor(Math.random() * chars.length);
+       password += characters.substring(random, random+1);
+       console.log(characters) //not making here
+     }}
+    }       
+    
+    // document.querySelector("#password").value = password;
      
+    
+      
