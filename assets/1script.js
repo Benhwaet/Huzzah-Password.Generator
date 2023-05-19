@@ -1,10 +1,10 @@
 
 var generateBtn = document.querySelector("#generate");
-
-generateBtn.addEventListener("click", writePassword);
+var password = document.querySelector("#password").value
+var passwordText = document.querySelector("#password")
 
 var characters = '';
-var numberChars;
+var numberChars = '';
 
 function writePassword() {
     var password = generatePassword();
@@ -22,14 +22,16 @@ function passwordLength() {
         alert("You have chosen a password length of " + numberChars + " characters");
         return numberChars;
     } else {
-        alert("Oops, that's not a number. Try again!");
+        alert("Oops, try again!");
         passwordLength();
         }
     }      
+console.log(length)
+console.log(numberChars)
 
 function addLowercase() {
     var lowercase = 'abcdefghijklmnopqrstuvwxyz';
-    var addLowercase = confirm("Would you like to include Lowercase characters to your password?");
+    var addLowercase = confirm("Would you like to include -lowercase- characters to your password?");
     if (addLowercase) {
         characters += lowercase;   
         } return characters;
@@ -37,7 +39,7 @@ function addLowercase() {
 
 function addUppercase() {
     var uppercase = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
-    var addUppercase = confirm("Would you like to include Uppercase characters to your password?");    
+    var addUppercase = confirm("Would you like to include -uppercase- characters to your password?");    
         if (addUppercase) {
      characters += uppercase;
      console.log(characters)
@@ -46,47 +48,58 @@ function addUppercase() {
 
 function addNumeric() {
     var numeric = '0123456789';
-    var addNumeric = confirm("Would you like to include Numbers in your password?");
+    var addNumeric = confirm("Would you like to include -numbers- in your password?");
     if (addNumeric) {
         characters += numeric;
         console.log(characters)
         } return characters;  
     }
 
-    console.log(numberChars)
-    console.log(characters)  
 
 function addSymbols() {
     var symbols = ' !#$%&*+,-./:;<=>?()"@\^_`{|}~';
-    var addSymbols = confirm("Would you like to add Special Characters to your password?");
+    var addSymbols = confirm("Would you like to add -special characters/symbols- to your password?");
     if (addSymbols) {
         characters += symbols;
-        console.log(characters)
+        
         } return characters;
     }
 
-    
+  console.log(password) 
+  console.log(characters)
+  console.log(numberChars)
+
 function generatePassword() {
+    var password = '';
+    
     passwordLength();
     addLowercase();
     addUppercase();
     addNumeric();
     addSymbols();
+    
     console.log(characters)
+    console.log(characters.length)
+    
     if (characters.length < 1) {
         alert("You need to choose at least one set of characters, please try again.")
         generatePassword();
-    } else {
-        var chars = numberChars
-        var password = '';
-       for (var i = 0; i <+ chars; i++){
-       random = Math.floor(Math.random() * chars.length);
-       password += characters.substring(random, random+1);
-       console.log(characters) //not making here
-     }}
+    } else if (characters.length > 1) {
+       
+    for (var i = 0; i <= numberChars; i ++) {
+       
+        password = Math.floor(Math.random() * characters.length);
+    //    password = mixup.split(0, numberChars);
+       
+       console.log(characters) //not making it here?
+     }
+
+    }   return password;
     }       
     
-    // document.querySelector("#password").value = password;
+    generateBtn.addEventListener("click", writePassword);
+
+   
      
     
       
