@@ -1,7 +1,7 @@
 
 var generateBtn = document.querySelector("#generate");
 
-generateBtn.addEventListener("click", writePassword());
+generateBtn.addEventListener("click", writePassword);
 
 var characters = '';
 var numberChars;
@@ -13,7 +13,8 @@ function writePassword() {
   }
 
 function passwordLength() {
-    var numberChars = Number(prompt("Please choose a number of characters for your password, between 8 and 128"));
+    var numberChars = (prompt("Please choose a number of characters for your password, between 8 and 128"));
+    
     if (numberChars < 8 || numberChars > 128 || isNaN(numberChars)) {
        alert("You must choose a number higher than 7 or lower than 129.");
        passwordLength();
@@ -24,7 +25,6 @@ function passwordLength() {
         alert("Oops, that's not a number. Try again!");
         passwordLength();
         }
-    window.numberChars = numberChars
     }      
 
 function addLowercase() {
@@ -54,7 +54,7 @@ function addNumeric() {
     }
 
     console.log(numberChars)
-    console.log(characters)
+    console.log(characters)  
 
 function addSymbols() {
     var symbols = ' !#$%&*+,-./:;<=>?()"@\^_`{|}~';
