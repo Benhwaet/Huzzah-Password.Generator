@@ -1,12 +1,11 @@
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
+
 var characters = '';
-var lowercase = 'abcdefghijklmnopqrstuvwxyz';
-var uppercase = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
-var numeric = '0123456789';
-var symbols = ' !#$%&*+,-./:;<=>?()"@\^_`{|}~';
+
 var numberChars;
 var password;
+var passwordText;
 
 function writePassword() {
   var password = generatePassword();
@@ -31,7 +30,7 @@ function passwordLength() {
     }      
 
 function addLowercase() {
-    // var lowercase = 'abcdefghijklmnopqrstuvwxyz';
+    var lowercase = 'abcdefghijklmnopqrstuvwxyz';
     var addLowercase = confirm("Would you like to include Lowercase characters to your password?");
     if (addLowercase) {
         characters += lowercase;   
@@ -39,7 +38,7 @@ function addLowercase() {
     }
 
 function addUppercase() {
-    // var uppercase = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+    var uppercase = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
     var addUppercase = confirm("Would you like to include Uppercase characters to your password?");    
         if (addUppercase) {
      characters += uppercase;
@@ -48,7 +47,7 @@ function addUppercase() {
     }
 
 function addNumeric() {
-    // var numeric = '0123456789';
+    var numeric = '0123456789';
     var addNumeric = confirm("Would you like to include Numbers in your password?");
     if (addNumeric) {
         characters += numeric;
@@ -57,7 +56,7 @@ function addNumeric() {
     }
 
 function addSymbols() {
-    // var symbols = ' !#$%&*+,-./:;<=>?()"@\^_`{|}~';
+    var symbols = ' !#$%&*+,-./:;<=>?()"@\^_`{|}~';
     var addSymbols = confirm("Would you like to add Special Characters to your password?");
     if (addSymbols) {
         characters += symbols;
