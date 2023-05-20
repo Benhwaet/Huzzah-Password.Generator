@@ -31,6 +31,8 @@ function generatePassword() {
                 generatePassword()
                 } else if (7 > numberChars < 129) {
                     alert("You have chosen a password length of " + numberChars + " characters");
+                } else if(prompt=false){
+                    document.write("sad");
                 }
       
         var addLowercase = confirm("Would you like to include -lowercase- characters to your password?");
@@ -61,7 +63,7 @@ function generatePassword() {
              // <https://foolishdeveloper.com/random-password-generator-with-javascript/#:~:text=Here%20Math.random%20()%20will%20help%20to%20create%20a%20random%20password.>
                 for (var i = 0; i <= numberChars; i++) {
                     var random = Math.floor(Math.random() * characters.length);
-                    password += characters.substring(random, random +1);
+                    password += characters.substring(random, random+1);
                    }
             console.log(password)
      //Brings variable determined locally into the global scope

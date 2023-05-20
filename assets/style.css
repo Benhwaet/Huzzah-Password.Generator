@@ -13,7 +13,7 @@ body,
 }
 
 body {
-  font-family: sans-serif;
+  font-family: DejaVu Sans Mono, monospace;
   background-color: #000000;
 }
 
@@ -28,6 +28,7 @@ header {
   padding: 20px;
   padding-top: 0px;
   color: hsl(132, 78%, 55%);
+  font-size: x-large;
 }
 
 .card {
@@ -41,6 +42,7 @@ header {
   max-width: 800px;
   padding: 30px 40px;
 }
+
 h2 {
   color:hsl(132, 91%, 40%);
 }
@@ -49,7 +51,6 @@ h2 {
   content: " ";
   display: block;
   width: 100%;
- 
   background:hsl(132, 78%, 55%);
   height: 2px;
 }
@@ -59,7 +60,8 @@ h2 {
 }
 
 textarea {
-  background-color: rgb(97, 112, 101);
+  background-color: rgb(52, 52, 52);
+  color:hsl(132, 78%, 55%);
 }
 
 .card-footer {
@@ -82,23 +84,26 @@ textarea {
 
 .btn {
   border: none;
-  background-color: hsl(27, 10%, 17%);
+  background-color: hsl(26, 6%, 23%);
   border-radius: 25px;
   box-shadow: hsl(132, 91%, 40%) 3px 4px 8px 2px hsl(132, 78%, 55%) 3px 4px 4px
     2px;
   color:hsl(132, 91%, 40%);
   display: inline-block;
-  font-size: 22px;
+  font-size: 25px;
+  font-style: oblique;
+  font-weight: bold;
   line-height: 22px;
   margin: 16px 16px 16px 20px;
   padding: 14px 34px;
   text-align: center;
   cursor: pointer;
+  font-family: DejaVu Sans Mono, monospace;
 }
 
 button[disabled] {
   cursor: default;
-  background: #c0c7cf;
+  background: #757677;
 }
 
 .float-right {
@@ -110,14 +115,14 @@ button[disabled] {
   -moz-appearance: none;
   appearance: none;
   border: 1px solid hsl(132, 91%, 40%);
-  color:hsl(132, 91%, 40%)
+  color:hsl(132, 91%, 40%);
   display: block;
   width: 100%;
   padding-top: 15px;
   padding-left: 15px;
   padding-right: 15px;
   padding-bottom: 85px;
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   text-align: center;
   margin-top: 10px;
   margin-bottom: 10px;
@@ -134,7 +139,7 @@ button[disabled] {
   }
 
   #password {
-    font-size: 1rem;
+    font-size: 1.5rem;
   }
 }
 
