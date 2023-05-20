@@ -37,6 +37,8 @@ THEN the password is either displayed in an alert or written to the page
 To use the application, the user must make their way to the page and click on the "Generate Password" Button. The button will generate prompts where the user must choose the length of the password and which characters will be used (lowercase, uppercase, numeric, and/or special), according to certain parameters. The application will then provide a password fitting these criteria in the text box.
 For specific parameters necessary, see Acceptance Criteria.
 
+For access to the deployed website: <https://benhwaet.github.io/Huzzah-Password.Generator/> .
+
 ## Credits
 
 The starter code provided includes the index.html, style.css, script.js (lines 1 to 14), and the Challenge03README.md files. These were provided by edX (<www.edx.org>) who created the materials and instruction for the bootcamp mentioned in the description. This bootcamp is hosted by the University of New Brunswick (<https://bootcamps.unb.ca>).
