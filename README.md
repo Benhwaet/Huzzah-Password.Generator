@@ -39,6 +39,7 @@ For specific parameters necessary, see Acceptance Criteria.
 
 For access to the deployed website: <https://benhwaet.github.io/Huzzah-Password.Generator/> .
 
+
 ## Credits
 
 The starter code provided includes the index.html, style.css, script.js (lines 1 to 14), and the Challenge03README.md files. These were provided by edX (<www.edx.org>) who created the materials and instruction for the bootcamp mentioned in the description. This bootcamp is hosted by the University of New Brunswick (<https://bootcamps.unb.ca>).
