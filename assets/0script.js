@@ -1,10 +1,9 @@
 
-//connecting variables to html elements
 var generateBtn = document.querySelector("#generate");
+// var clearBTn = document.getElementbyId("#clear").value;
 var password = document.querySelector("#password").value
 var passwordText = document.querySelector("#password")
 
-//declaring characters to be included or not in password
 var characters = '';
 var numberChars = '';
 var lowercase = 'abcdefghijklmnopqrstuvwxyz';
@@ -12,18 +11,18 @@ var uppercase = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
 var numeric = '0123456789';
 var symbols = ' !#$%&*+,-./:;<=>?()"@\^_`{|}~';
 
+// function clearField() {
+//     document.getElementbyId("#clear").value = '';
+// }
+
+
 function writePassword() {
     var password = generatePassword();
     var passwordText = document.querySelector("#password");
     passwordText.value = password;
   }
-//starts the writePassword function once the "Generate Password" button is clicked
-generateBtn.addEventListener("click", writePassword);
 
-//Prompts questions about password config. and alerts if conditions not met
 function generatePassword() {
-        password = '';
-        characters = '';
         var numberChars = (prompt("Please choose a number of characters for your password, between 8 and 128"));
         
             if (numberChars < 8 || numberChars > 128 || isNaN(numberChars)) {
@@ -31,6 +30,9 @@ function generatePassword() {
                 generatePassword()
                 } else if (7 > numberChars < 129) {
                     alert("You have chosen a password length of " + numberChars + " characters");
+                } else {
+                alert("Oops, try again!");
+                generatePassword();
                 }
       
         var addLowercase = confirm("Would you like to include -lowercase- characters to your password?");
@@ -53,20 +55,20 @@ function generatePassword() {
             if (addSymbols) {
                 characters += symbols;
                 }
-                        
-    //Determines if user has chosen any of the character options, if at least one selected, password generates
+                console.log(characters)           
+    
             if (characters.length < 1) {
                 alert("You need to choose at least one set of characters, please try again.")
                 generatePassword();
             } else if (characters.length > 1) {
-             // https://foolishdeveloper.com/random-password-generator-with-javascript/#:~:text=Here%20Math.random%20()%20will%20help%20to%20create%20a%20random%20password.
+       console.log(numberChars)
                 for (var i = 0; i <= numberChars; i++) {
-                    var random = Math.floor(Math.random() * characters.length);
-                    password += characters.substring(random, random +1);
+                    var randomNumber = Math.floor(Math.random() * characters.length);
+                    password += characters.substring(randomNumber, randomNumber +1);
                    }
             console.log(password)
-     //Brings variable determined locally into the global scope
-        }      return password;
+     }      return password;
     }   
-    
-    
+        console.log(clearBtn)
+    generateBtn.addEventListener("click", writePassword);
+    // clearBTn.addEventListener("click", clearField);

@@ -41,6 +41,8 @@ For specific parameters necessary, see Acceptance Criteria.
 
 The starter code provided includes the index.html, style.css, script.js (lines 1 to 14), and the Challenge03README.md files. These were provided by edX (<www.edx.org>) who created the materials and instruction for the bootcamp mentioned in the description. This bootcamp is hosted by the University of New Brunswick (<https://bootcamps.unb.ca>).
 
+I used the for loop from a tutorial on foolishdeveloper.com, changing the variables to fit my code. (See javascript comments for full link.)
+
 ## License
 
 This project uses the MIT License. For more details, see the LICENSE file in the repository for this project.
