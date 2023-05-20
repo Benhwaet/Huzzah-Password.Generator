@@ -37,7 +37,8 @@ THEN the password is either displayed in an alert or written to the page
 To use the application, the user must make their way to the page and click on the "Generate Password" Button. The button will generate prompts where the user must choose the length of the password and which characters will be used (lowercase, uppercase, numeric, and/or special), according to certain parameters. The application will then provide a password fitting these criteria in the text box.
 For specific parameters necessary, see Acceptance Criteria.
 
-Currently, the password generator is not functional, but parts of the code is working as planned. The prompt boxes are recording the correct information and responding to the conditions in the if...else statements. Console logs indicate that the correct characters are being recorded as chosen. However, the pop-up generates before the button is pressed and the password in the text box returns as 'undefined', due to the variable numberChars (the number of characters chosen to be in the user's password) is local rather than global. I am still debugging the code.
+For access to the deployed website: <https://benhwaet.github.io/Huzzah-Password.Generator/> .
+
 
 ## Credits
 

@@ -41,7 +41,6 @@ function generatePassword() {
         var addUppercase = confirm("Would you like to include -uppercase- characters to your password?");    
             if (addUppercase) {
                  characters += uppercase;
-                 console.log(characters)
                 }
                 
         var addNumeric = confirm("Would you like to include -numbers- in your password?");
@@ -59,7 +58,7 @@ function generatePassword() {
                 alert("You need to choose at least one set of characters, please try again.")
                 generatePassword();
             } else if (characters.length > 1) {
-             // https://foolishdeveloper.com/random-password-generator-with-javascript/#:~:text=Here%20Math.random%20()%20will%20help%20to%20create%20a%20random%20password.
+             // <https://foolishdeveloper.com/random-password-generator-with-javascript/#:~:text=Here%20Math.random%20()%20will%20help%20to%20create%20a%20random%20password.>
                 for (var i = 0; i <= numberChars; i++) {
                     var random = Math.floor(Math.random() * characters.length);
                     password += characters.substring(random, random +1);
