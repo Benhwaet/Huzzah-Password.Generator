@@ -1,7 +1,7 @@
 
 //connecting variables to html elements
 var generateBtn = document.querySelector("#generate");
-var password = document.querySelector("#password").value
+var newPassword = document.querySelector("#password").value
 var passwordText = document.querySelector("#password")
 
 //declaring characters to be included or not in password
@@ -23,6 +23,7 @@ generateBtn.addEventListener("click", writePassword);
 //Prompts questions about password config. and alerts if conditions not met
 function generatePassword() {
         password = '';
+        newPassword = '';
         characters = '';
         var numberChars = (prompt("Please choose a number of characters for your password, between 8 and 128"));
         
@@ -54,7 +55,8 @@ function generatePassword() {
             if (addSymbols) {
                 characters += symbols;
                 }
-                        
+                console.log(numberChars);
+
     //Determines if user has chosen any of the character options, if at least one selected, password generates
             if (characters.length < 1) {
                 alert("You need to choose at least one set of characters, please try again.")
@@ -63,11 +65,12 @@ function generatePassword() {
              // <https://foolishdeveloper.com/random-password-generator-with-javascript/#:~:text=Here%20Math.random%20()%20will%20help%20to%20create%20a%20random%20password.>
                 for (var i = 0; i <= numberChars; i++) {
                     var random = Math.floor(Math.random() * characters.length);
-                    password += characters.substring(random, random+1);
+                    password += characters.substring(random, random +1);
+                    newPassword = password.slice(0, -1);
                    }
             console.log(password)
      //Brings variable determined locally into the global scope
-        }      return password;
+        }      return newPassword;
     }   
     
     
