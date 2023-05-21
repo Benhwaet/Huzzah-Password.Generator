@@ -34,8 +34,14 @@ THEN the password is either displayed in an alert or written to the page
 
 ## Usage
 
-To use the application, the user must make their way to the page and click on the "Generate Password" Button. The button will generate prompts where the user must choose the length of the password and which characters will be used (lowercase, uppercase, numeric, and/or special), according to certain parameters. The application will then provide a password fitting these criteria in the text box.
+To use the application, the user must make their way to the page and click on the "Generate Password" Button.
+
+
+ The button will generate prompts where the user must choose the length of the password and which characters will be used (lowercase, uppercase, numeric, and/or special), according to certain parameters. The application will then provide a password fitting these criteria in the text box.
 For specific parameters necessary, see Acceptance Criteria.
+
+![Password Generator Image](assets/images/GeneratePassword.png)
+![Generated Password, all options chosen](assets/images/Huzzah!.png)
 
 For access to the deployed website: <https://benhwaet.github.io/Huzzah-Password.Generator/> .
 
